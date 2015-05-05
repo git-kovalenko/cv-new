@@ -1,0 +1,99 @@
+*::-webkit-input-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*:-moz-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*::-moz-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*:-ms-input-placeholder {
+	color: #666;
+	opacity: 1;
+}
+html{
+	height: 100%;
+}
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+	
+}
+body input:required:valid,
+body textarea:required:valid {
+	
+}
+body {
+	font-family: "RobotoRegular", sans-serif;
+	font-size: 16px;
+}
+header{
+	min-height: 500px;
+}
+.lang-selector{
+	float: right;
+}
+.lang-selector > button{
+	height: 22px;
+}
+
+.header-contact{
+	background: #0F7171;
+	float: left;
+	font-size: 12px;
+	line-height: 1.7;
+	height: 22px;
+	border-radius: 3px;
+}
+.header-contact a {
+	display: inline-block;
+	padding: 0 10px;
+	border-radius: 3px;	color: #fff;
+	opacity: 0.7;
+
+}
+.header-contact a:hover {
+	opacity: 1;
+	-webkit-transition: opacity 0.3s ease-out;
+	-moz-transition: opacity 0.3s ease-out;
+	-o-transition: opacity 0.3s ease-out;
+	transition: opacity 0.3s ease-out;
+}
+.navbar-transparent{
+	margin-top: 30px;
+}
+
+.nav_portret{
+	float: left;
+	margin: -15px 5px 0 0;
+	height: 50px;
+}
+.header-about{
+
+}
+.header-avatar{
+	display: table-cell;
+	vertical-align: middle;
+}
+.header-avatar img{
+	width: 140px;
+}
+.header-description {
+	display: table-cell;
+	vertical-align: middle;
+	overflow: hidden;
+	padding: 0px 15px;
+}
+
+
+.aaa{
+
+	height: 2000px;
+}
+
+
+
+
+
