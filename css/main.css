@@ -30,7 +30,7 @@ body {
 	font-size: 16px;
 }
 header{
-	min-height: 500px;
+	min-height: 700px;
 }
 .lang-selector{
 	float: right;
@@ -61,32 +61,86 @@ header{
 	-o-transition: opacity 0.3s ease-out;
 	transition: opacity 0.3s ease-out;
 }
-.navbar-transparent{
+.navbar-transparent {
 	margin-top: 30px;
+	background-color: transparent !important;
 }
 
-.nav_portret{
+.navbar-default .navbar-brand {
+	color: #FFF;
+}
+.navbar-brand {
+	font-family: Marmelad;
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: #adadad;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+	color: #FFF;
+	-webkit-transition: color 0.3s ease-out;
+	-moz-transition: color 0.3s ease-out;
+	-o-transition: color 0.3s ease-out;
+	transition: color 0.3s ease-out;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+	color: #FFF;
+	background-color: transparent;
+	background-image: none;
+}
+.navbar-nav > .active > a,
+.navbar-nav > .active > a:hover,
+.navbar-nav > .active > a:focus {
+	font-weight: 800;
+}
+
+.navbar-default{
+	background-image: none;
+	border: none;
+}
+.navbar-collapse {
+	padding-right: 0;
+}
+.navbar-brand > img {
+	display: none;
+}
+.nav_portreit{
 	float: left;
 	margin: -15px 5px 0 0;
 	height: 50px;
 }
-.header-about{
 
-}
 .header-avatar{
 	display: table-cell;
 	vertical-align: middle;
+	text-align: center;
 }
 .header-avatar img{
 	width: 140px;
 }
-.header-description {
+
+.header-description{
 	display: table-cell;
 	vertical-align: middle;
-	overflow: hidden;
 	padding: 0px 15px;
-}
 
+	color: #FFF;
+	background-color: rgba(15, 113, 113, 0.5)
+}
+.header-social-links{
+	list-style-type: none;
+	display: block;
+}
+.header-social-links li{
+	display: inline-block;
+	width: 20%
+}
+.header-social-links li a{
+	display: block;
+}
 
 .aaa{
 

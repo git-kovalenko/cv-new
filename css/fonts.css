@@ -38,3 +38,13 @@
 	font-style: normal;
 	font-weight: normal;
 }
+/* font-family: "Marmelad"; */
+@font-face {
+	font-family: "Marmelad";
+	src: url('../fonts/marmelad/marmelad-regular.eot');
+	src: url('../fonts/marmelad/marmelad-regular.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/marmelad/marmelad-regular.woff') format('woff'),
+	url('../fonts/marmelad/marmelad-regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}

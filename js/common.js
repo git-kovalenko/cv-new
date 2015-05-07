@@ -1,13 +1,15 @@
 $(document).ready(function() {
 
 	scrollStart = 50;
-	$(window).scroll(function(){
+	$(window).scroll(function() {
 		var scroll = $(window).scrollTop();
-		//$('.menuBlock').html()
-		if (scroll > scrollStart)
-			$('.navbar').addClass('navbar-inverse navbar-fixed-top').removeClass('navbar-transparent');
-		else
-			$('.navbar').removeClass('navbar-inverse navbar-fixed-top').addClass('navbar-transparent');
+		if (scroll > scrollStart){ //$('.navbar').hasClass('navbar-transparent')
+			$('.nav_portreit').show();
+			$('.navbar').addClass('navbar-inverse navbar-fixed-top').removeClass('navbar-default navbar-transparent');
+		}else {
+			$('.navbar').removeClass('navbar-inverse navbar-fixed-top').addClass('navbar-default navbar-transparent');
+			$('.nav_portreit').hide();
+		}
 	});
 
 
