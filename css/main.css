@@ -125,21 +125,66 @@ header{
 .header-description{
 	display: table-cell;
 	vertical-align: middle;
-	padding: 0px 15px;
-
+	padding: 15px;
 	color: #FFF;
-	background-color: rgba(15, 113, 113, 0.5)
+	background-color: rgba(15, 113, 113, 0.6);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
 }
+
 .header-social-links{
 	list-style-type: none;
 	display: block;
+	padding-left: 0;
 }
 .header-social-links li{
 	display: inline-block;
-	width: 20%
+	float: none;
+	width: auto;
 }
 .header-social-links li a{
 	display: block;
+	font-size: 20px;
+}
+.header-social-links .btn {
+	padding: 3px 9px;
+}
+.header-social-links li:nth-of-type(1) .btn-primary {
+	background: #007bb6;
+}
+.header-social-links li:nth-of-type(2) .btn-primary {
+	background: #96C04B;
+}
+.header-social-links li:nth-of-type(3) .btn-primary {
+	background: #00aff0;
+}
+.header-social-links li:nth-of-type(4) .btn-primary {
+	background: #FFF;
+	color: #000;
+}
+
+.shortcut {
+	padding-top: 30px;
+}
+.shortcut > a{
+	display: block;
+	height: 350px;
+	background: #68A09E;
+	background-image: url('../images/sphere.jpg');
+	background-repeat: no-repeat;
+	background-position: top;
+	background-size: contain;
+
+}
+.shortcut:nth-of-type(2) a{
+	background-image: url('../images/id_reader.jpg');
+}
+.shortcut:nth-of-type(3) a{
+	background-image: url('../images/bonfire.jpg');
+}
+.shortcut:nth-of-type(4) a{
+	background-image: url('../images/helth.jpg');
 }
 
 .aaa{
