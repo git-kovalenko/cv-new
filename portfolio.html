@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="ru">
+	<!--<![endif]-->
+	<head>
+		<meta charset="utf-8" />
+		<title>Front-end developer</title>
+		<meta name="description" content="" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="favicon.ico" />
+		<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="libs/bootstrap/css/bootstrap-theme.min.css" />
+		<link rel="stylesheet" href="libs/font-awesome-4.2.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="libs/vegas/vegas.min.css" />
+		<link rel="stylesheet" href="css/fonts.css" />
+		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="css/media.css" />
+		
+	</head>
+	<body>
+
+		<header>
+			<div class="container">
+				<div class="row">
+					<div class="btn-group btn-group-xs lang-selector">
+						<button type="button" class="btn btn-primary">Русский</button>
+						<button type="button" class="btn btn-primary">English</button>
+					</div>
+
+					<div class="header-contact">
+						<a href="mailto:a.kovalenko@ukr.net">
+							<i class="fa fa-envelope-o"></i> a.kovalenko@ukr.net
+						</a>
+						<a href="skype:kovalenko.84">
+							<i class="fa fa-skype"></i> kovalenko.84
+						</a>
+						<a href="tel:+38-097-717-1547">
+							<i class="fa fa-phone"></i> +38 (097) 7171547
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<nav class="navbar navbar-default navbar-transparent">
+ 				<div class="container">
+					
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavbar">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#">
+							<img class = "nav_portreit" src="images/portreit.jpg" alt = "portreit">
+							Front-end developer
+						</a>
+					</div>
+					
+					<div class="collapse navbar-collapse" id="mainNavbar">
+						<ul class="nav navbar-nav navbar-right">
+							<li class="active"><a href="#">Home</a></li>
+							<li><a  href="#">CV</a></li>
+							<li><a  href="#">Portfolio</a></li>
+							<li><a  href="#">Contact</a></li>
+						</ul>
+					</div>
+					
+
+				</div>
+			</nav>
+
+			<div class="container">
+				<div class="row">
+					<div class="header-links col-lg-3 col-sm-3 col-xs-12">
+						<ul class="header-social-links">
+							<li>
+								<a class="btn btn-primary pjh-icon pjh-icon-linkedin" href='https://www.linkedin.com/in/kovalenkoanatoliy' target="_blank" data-toggle="tooltip" data-placement="bottom" title='linkedin.com/in/kovalenkoanatoliy'>
+									<i class="fa fa-linkedin"></i>
+								</a>
+							</li>
+							<li>
+								<a class="btn btn-primary pjh-icon pjh-icon-phone" href='mailto:a.kovalenko@ukr.net' data-toggle="tooltip" data-placement="bottom" title="a.kovalenko@ukr.net">
+									<i class="fa fa-envelope-o"></i>
+								</a>
+							</li>
+							<li>
+								<a class="btn btn-primary pjh-icon pjh-icon-mail" href="skype:kovalenko.84" data-toggle="tooltip" data-placement="bottom" title="kovalenko.84">
+									<i class="fa fa-skype"></i>
+								</a>
+							</li>
+							<li>
+								<a class="btn btn-primary pjh-icon pjh-icon-twitter" href='https://github.com/git-kovalenko' title='git-kovalenko' target="_blank" data-toggle="tooltip" data-placement="bottom">
+									<i class="fa fa-github-alt"></i>
+								</a>
+							</li>
+						</ul>
+
+					</div>
+				</div>
+				<div class="jumbotron header-jumbotron">
+					<h1>Recent projects</h1>
+					<p>
+						Several projects and pages that I developed in 2014
+					</p>
+				</div>
+			</div>
+		</header>
+		<main>
+			<section class="articles">
+
+			<article>
+				<div class="container">
+					<div class="row">
+						<div class="article-img col-lg-4 col-md-4 col-sm-4">
+							<a href='http://sphere.3d-foto.in.ua' target="_blank">
+								<img class="img-thumbnail" src='images/sphere.jpg' alt='screen shot'>
+							</a>
+						</div>
+						<div class="col-lg-8 col-md-8 col-sm-8">
+							<h3>Ray tracing in integrating sphere</h3>
+							<p>
+								В проекте реализовано 2-мерное моделирование лучей светодиода внутри сферы, покрытой изнутри светорассеивающим материалом.
+								Сфера имеет перегородку, размер и положение которой можно изменять мышью. Для отрисовки сферы использован &lt;canvas&gt;, график освещенности выводится
+								с помощью JS библиотеки <a href='http://amcharts.com'>AmCharts</a> или <a href='https://developers.google.com/chart/'>Google Charts</a>.
+								<br><br>Страница проекта <a href='http://sphere.3d-foto.in.ua'>sphere.3d-foto.in.ua</a>
+
+								<br>Репозиторий:<a class='git_link' href='https://github.com/git-kovalenko/sphere/'>github.com/git-kovalenko/sphere/</a>
+							</p>
+							<h4>Технологии:</h4>
+							<ul class='used_technology'>
+								<li><i class="fa fa-wrench"></i> Html5/CSS3</li>
+								<li><i class="fa fa-wrench"></i> JS/Jquery</li>
+								<li><i class="fa fa-wrench"></i> AmCharts</li>
+								<li><i class="fa fa-wrench"></i> Google Charts</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</article>
+			<article>
+				<div class="container">
+					<div class="row">
+						<div class="article-img col-lg-4 col-md-4 col-sm-4">
+							<a href='http://koh.3d-foto.in.ua' target="_blank">
+								<img class="img-thumbnail" src='images/id_reader.jpg' alt='screen shot'>
+							</a>
+						</div>
+						<div class="col-lg-8 col-md-8 col-sm-8">
+							<h3>Work wear database</h3>
+							<p>
+								Проект разработан для учета оборота спецодежды между подрядчиком и заказчиком. Веб интерфейс работает со
+								сканером штрих-кодов, автоматически связываясь с базой данных MySQL на сервере. Реализовано разграничение прав пользователей,
+								учтены все требования заказчика по взаимодействию пользователей с базой данных, в том числе импорт в базу данных из .txt файла,
+								а также выборка по параметрам с генерацией отчета в формате файла Excel. Подробнее: <a href='http://koh.3d-foto.in.ua/help'>Справка по работе с базой данных ID Reader</a>
+								<br><br><a href='http://koh.3d-foto.in.ua' target="_blank">Демонстрационная страница проекта.</a>
+
+							</p>
+							<h4>Технологии:</h4>
+							<ul class='used_technology'>
+								<li><i class="fa fa-wrench"></i> Html5/CSS3</li>
+								<li><i class="fa fa-wrench"></i> JS/Jquery</li>
+								<li><i class="fa fa-wrench"></i> PHP/Kohana</li>
+								<li><i class="fa fa-wrench"></i> PHPExcel</li>
+								<li><i class="fa fa-wrench"></i> MySQL</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</article>
+			<article>
+				<div class="container">
+					<div class="row">
+						<div class="article-img col-lg-4 col-md-4 col-sm-4">
+							<a href="http://cv.3d-foto.in.ua/projects/web-page-bonfire/bonfire.html" target="_blank">
+								<img class="img-thumbnail" src='images/bonfire.jpg' alt='screen shot'>
+							</a>
+						</div>
+						<div class="col-lg-8 col-md-8 col-sm-8">
+							<h3>Web page with sliders</h3>
+							<p>
+								Страница сверстана по <a href='images/eCommerce-Website-PSD.rar'>.PSD</a> макету.
+								Адаптивная по ширине от 600 до 940 px. Добавлен скрипт для слайдеров.
+								<br><br><a href='projects\web-page-bonfire\bonfire.html' target="_blank">Ссылка на страницу</a>.
+								<br><br>Репозиторий:<a class='git_link' href='https://github.com/git-kovalenko/web-page-bonfire/'>github.com/git-kovalenko/web-page-bonfire/</a>
+							</p>
+							<h4>Технологии:</h4>
+							<ul class='used_technology'>
+								<li><i class="fa fa-wrench"></i> Html5/CSS3</li>
+								<li><i class="fa fa-wrench"></i> JS/Jquery</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</article>
+			<article>
+				<div class="container">
+					<div class="row">
+						<div class="article-img col-lg-4 col-md-4 col-sm-4">
+							<a href="http://cv.3d-foto.in.ua/projects/helth/index.html" target="_blank">
+								<img class="img-thumbnail" src='images/helth.jpg' alt='screen shot'>
+							</a>
+						</div>
+						<div class="col-lg-8 col-md-8 col-sm-8">
+							<h3>Responsive page on clear CSS</h3>
+							<p>
+								Страница сверстана по .PSD макетам. Макетов два - обычный и с адаптацией для узких дисплеев. Адаптивность реализована на чистом CSS без использования фреймворков.
+								<br><br><a href='projects\web-page-bonfire\bonfire.html' target="_blank">Ссылка на страницу</a>.
+								<br><br>Репозиторий:<a class='git_link' href='https://github.com/git-kovalenko/web-page-bonfire/'>github.com/git-kovalenko/web-page-bonfire/</a>
+							</p>
+							<h4>Технологии:</h4>
+							<ul class='used_technology'>
+								<li><i class="fa fa-wrench"></i> Html5</li>
+								<li><i class="fa fa-wrench"></i> CSS3</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</article>
+
+
+
+
+			</section>
+		</main>
+
+
+
+		<footer class="footer col-sm-12 col-md-12 col-lg-12">
+			<div class="container">
+				<div class="row">
+					<a class="footer-logo col-sm-4 col-md-3 col-lg-2" href="#">Front-end developer</a>
+					<p class="footer-tag col-sm-8 col-md-9 col-lg-10">
+						Built on Bootstrap 3 - Hosted by <a href="http://www.ukraine.com.ua" target="_blank">ukraine.com.ua</a> - Brought to life by <a href="http://cv.3d-foto.in.ua" target="_blank">Me</a>
+						 - Last update 11.05.2015
+					</p>
+
+		</footer>
+
+
+
+<!--[if lt IE 9]>
+	<script src="libs/html5shiv/es5-shim.min.js"></script>
+	<script src="libs/html5shiv/html5shiv.min.js"></script>
+	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+	<script src="libs/respond/respond.min.js"></script>
+<![endif]-->
+<script src="libs/jquery/jquery-1.11.1.min.js"></script>
+<script src = libs/jquery/jquery.cookie.js></script>
+<script src="libs/bootstrap/js/bootstrap.min.js"></script>
+<script src="libs/vegas/vegas.min.js"></script>
+<script src="js/common.js"></script>
+
+<!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
+<!-- Google Analytics counter --><!-- /Google Analytics counter -->
+</body>
+</html>

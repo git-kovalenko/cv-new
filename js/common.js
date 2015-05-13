@@ -1,6 +1,12 @@
 $(document).ready(function() {
+	navbarSetup();
+	sliderSetup();
+	tooltipSetup();
+	langSetup();
+});
 
-	scrollStart = 50;
+function navbarSetup(){
+	var scrollStart = 50;
 	$(window).scroll(function() {
 		var scroll = $(window).scrollTop();
 		if (scroll > scrollStart){ //$('.navbar').hasClass('navbar-transparent')
@@ -11,8 +17,8 @@ $(document).ready(function() {
 			$('.nav_portreit').hide();
 		}
 	});
-
-
+}
+function sliderSetup(){
 	$('header').vegas({
 		slides: [
 			{ src: 'images/bg_1.jpg' },
@@ -21,11 +27,153 @@ $(document).ready(function() {
 		transition: 'fade', //[ 'fade', 'zoomOut', 'swirlLeft' ]
 		timer: false
 	});
-
-
+}
+function tooltipSetup(){
 	$('[data-toggle="tooltip"]').tooltip();
+}
+function langSetup(){
+	var lang = $.cookie('lang');
+	var page = $.cookie('file_name');
+	var tab_index = parseInt($.cookie('tab_index'));
+	if(! lang){
+		var lang = 'ru';
+		$.cookie('lang', 'ru');
+	}
+	if(! page){
+		var page = 'portfolio.php';
+		$.cookie('page', 'portfolio.php');
+	}
+	if(! (tab_index >= 0)){
+		var tab_index = 0;
+		$.cookie('tab_index', '0');
+	}
 
-	home_slider = new Cyclic_slider( $('.home-slider'));
+	load_common_parts(lang, tab_index);
+	load_page(lang, page, tab_index);
+	switch (lang){
+		case "ru": set_lang_btn('.lang_selector li:nth-child(1)')
+			break
+		case "en": set_lang_btn('.lang_selector li:nth-child(2)')
+			break
+	}
+
+	$('.lang_selector li:nth-child(1)').click(function(){
+		change_lang(this, 'ru');
+	});
+	$('.lang_selector li:nth-child(2)').click(function(){
+		change_lang(this, 'en');
+	});
+	function change_lang(btn, lang){
+		$.cookie('lang', lang);
+		set_lang_btn(btn)
+		load_common_parts(lang, $.cookie('tab_index'));
+		load_page(lang, $.cookie('file_name'), $.cookie('tab_index'));
+	}
+	function set_lang_btn(btn){
+		$(btn).siblings('li').css({"background" : "gray"});
+		$(btn).css({"background" : "#FF9900"});
+	}
+
+	var file_names = [
+		"common_page.php",
+		"cv.php",
+		"portfolio.php",
+		"contacts.php",
+	];
+
+	$("body").on("click", '.navbar-nav li', function(e){
+		if (e.target.tagName == "LI"){
+			var index = $(e.target).index();
+		}else{
+			var index = $(e.target).parent().index();
+		}
+		alert(index)
+
+
+		load_common_parts($.cookie('lang'), index);
+		load_page($.cookie('lang'), file_names[index], index);
+	});
+};
+
+function toggle_tabs(index){
+	$(".sidebar_menu li").each(function(){
+		this.style.cssText = "";
+	});
+	$(".navigation li").each(function(){
+		this.style.cssText = "";
+	});
+	$(".sidebar_menu li:nth-child("+(index+1)+") ").css({ "margin-left": "5px",	"margin-right": "0"});
+	$(".navigation li:nth-child("+(index+1)+") ").css({ "margin-bottom": "-10px",	"height": "35px"});
+	$.cookie('tab_index', index);
+}
+
+function load_page(language, file_name, index){
+	document.body.style.cursor = "wait";
+	$.post( file_name, {user_lang: language})
+		.success( function( data ){
+			var data = JSON.parse(data);
+			$(".content").html(data.main);
+			$.cookie('file_name', file_name);
+			document.body.style.cursor = "default";
+		});
+
+}
+function load_common_parts(language, index){
+	document.body.style.cursor = "wait";
+	$.post( "common_page.php", {user_lang: language})
+		.success( function( data ){
+			var data = JSON.parse(data);
+			var style_li = [];
+			$(".navigation li").each(function(){
+				style_li.push(this.style.cssText);
+			});
+
+			$(".header").html(data.header);
+
+			$(".navigation li").each(function(){
+				this.style.cssText = style_li.shift();
+			});
+
+
+			var style_li = [];
+			$(".sidebar_menu li").each(function(){
+				style_li.push(this.style.cssText);
+			});
+			$(".sidebar_menu").html(data.sidebar_menu);
+			$(".sidebar_menu li").each(function(){
+				this.style.cssText = style_li.shift();
+			});
+			toggle_tabs(index);
+			document.body.style.cursor = "default";
+		});
+}
+
+
+
+
+
+/*
+	$("body").on("click", '.navbar-nav li', function(e){
+		if (e.target.tagName == "LI"){
+			var index = $(e.target).index();
+		}else{
+			var index = $(e.target).parent().index();
+		}
+
+
+		var slides = [
+			{ src: 'images/bg_portfolio_1.jpg' },
+			{ src: 'images/bg_portfolio_2.jpg' },
+			{ src: 'images/bg_portfolio_3.jpg' }
+		];
+		$('.vegas-container').vegas('options', 'slides', slides);
+
+	})
+
+*/
+
+
+
 
 
 
@@ -115,4 +263,3 @@ $(document).ready(function() {
 		return false;
 	});
 
-});

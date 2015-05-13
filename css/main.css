@@ -163,19 +163,21 @@ header{
 	background: #FFF;
 	color: #000;
 }
-
+.main{
+	background-color: #DCDCDC;
+}
 .shortcut {
 	padding-top: 30px;
 }
 .shortcut > a{
 	display: block;
-	height: 350px;
 	background: #68A09E;
 	background-image: url('../images/sphere.jpg');
 	background-repeat: no-repeat;
 	background-position: top;
 	background-size: contain;
-
+	text-decoration: none;
+	padding-top: 100%;
 }
 .shortcut:nth-of-type(2) a{
 	background-image: url('../images/id_reader.jpg');
@@ -186,12 +188,125 @@ header{
 .shortcut:nth-of-type(4) a{
 	background-image: url('../images/helth.jpg');
 }
-
-.aaa{
-
-	height: 2000px;
+.shortcut-text{
+	background: -moz-linear-gradient(bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.6) 15px, rgba(0,0,0,0) 100%);
+	background: -webkit-linear-gradient(bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 15px, rgba(0,0,0,0) 100%);
+	background: -o-linear-gradient(bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.6) 15px, rgba(0,0,0,0) 100%);
+	background: -ms-linear-gradient(bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.6) 15px, rgba(0,0,0,0) 100%);
+	/* background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 15px, rgba(0,0,0,0) 100%); */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99000000', endColorstr='#00000000',GradientType=1 );
+	color: #fff;
+	font-size: 20px;
+	height: 50px;
+	padding: 10px 20px;
+	text-align: center;
+	margin-top: -50px;
+	-webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	transition: all 0.4s;
+}
+.shortcut > a:hover .shortcut-text{
+	height: 70px;
+	margin-top: -70px;
+	text-shadow: 2px 2px 2px #000;
 }
 
+.footer{
+	background-image: linear-gradient(to bottom, #3C3C3C 0px, #222 100%);
+	background-repeat: repeat-x;
+	background-color: #222;
+	padding: 15px 0;
+}
+.footer-tag{
+	color: #fff;
+	font-size: 12px;
+	line-height: 2.1;
+}
+/*portfolio*/
+/*==========*/
+.header-jumbotron{
+	background-color: rgba(255,255,255,0.7);
+}
+.articles{
+	background: #DEDEDE;
+}
+article{
+	padding-top: 30px;
+	padding-bottom: 15px;
+}
+article h3{
+	margin-top: 0;
+}
+article:nth-of-type(odd) {
+	background: #ACFFFF;
+}
+
+.article-img > a > img{
+	width: 100%;
+}
+.article-img > a > img:hover{
+	border-color: black;
+}
+.used_technology{
+	list-style: none;
+}
+.used_technology i{
+	color: red;
+}
+/*CV*/
+/*=============*/
+.header-download-cv{
+	font-size: 80px;
+}
+.header-download-cv a:first-child{
+	color: #CD0206;
+	text-decoration: none;
+}
+.resume ul{
+	list-style: none;
+	margin-left: -15px;
+}
+.resume ul .fa{
+	color: red;
+}
+.resume h4{
+	border-top: 1px solid blue;
+	color: firebrick;
+	padding-top: 10px;
+}
+.termin {
+	font-weight: 600;
+	font-style: italic;
+	background: linear-gradient(to top, lightblue, transparent);;
+}
+.download-cv{
+	position: absolute;
+	right: 0;
+}
+.download-cv a:first-child{
+	color:	#CD0206;
+}
+.download-cv a{
+	display: block;
+	font-size: 18px;
+}
+.cv-portreit{
+	background-image: url("../images/portreit.jpg");
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 100px;
+	padding-left: 110px;
+}
+/*CONTACTS*/
+/*=============*/
+
+.contacts > ul{
+	list-style: none;
+}
+.contacts > p{
+	margin: 5px 0 0 10px;
+}
 
 
 

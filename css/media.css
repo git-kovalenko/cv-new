@@ -38,12 +38,31 @@
  float: left;
  width: 25%;
  }
+ .download-cv{
+  position: relative;
+ }
+ .download-cv a{
+  font-size: 40px;
+  display: inline;
+  margin-right: 10px;
+ }
+ .download-cv a span{
+  display: none;
+ }
 
 }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px) {
-
+ .cv-portreit{
+  background-size: auto 100px;
+  height: auto;
+  padding-left: 0;
+  padding-top: 110px;
+ }
+ .contacts > ul{
+	margin-left: -40px;
+}
 }
 
 
